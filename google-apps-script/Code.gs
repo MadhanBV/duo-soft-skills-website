@@ -101,6 +101,9 @@ function doPost(e) {
     const randomPart = Math.floor(1000 + Math.random() * 9000);
     const registrationId = 'DUO-' + datePart + '-' + randomPart;
 
+    // 10 Columns in exact order:
+    // 1. Registration ID | 2. Submitted At | 3. Full Name | 4. Mobile Number | 5. Email Address
+    // 6. Selected Programme | 7. Preferred Contact Method | 8. Additional Information | 9. Privacy Consent | 10. Registration Status
     const row = [
       registrationId,
       submittedAt,

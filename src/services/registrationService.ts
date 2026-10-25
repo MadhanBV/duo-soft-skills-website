@@ -182,6 +182,8 @@ export async function submitRegistration(
   const endpoint = getConfiguredEndpoint();
 
   try {
+    // Use text/plain;charset=utf-8 so the browser sends a simple POST request without
+    // triggering a CORS OPTIONS preflight (which Google Apps Script does not support).
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
